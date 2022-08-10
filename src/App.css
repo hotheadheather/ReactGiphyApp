@@ -1,0 +1,73 @@
+body {
+  background-color: black;
+}
+
+.gifs {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gif {
+  padding: 0 2px;
+}
+
+.loader {
+  color: blue;
+}
+
+
+.gif-title {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 10px;
+  color: #ffffff;
+  padding: 20px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  background-clip: text;
+  /* background-clip tells your CSS exactly where you want to apply */
+  -webkit-background-clip: text;
+  transition: 1s ease-in-out;
+  animation: move 20s linear infinite;
+}
+
+h1:hover {
+  color: transparent;
+  /* -webkit-box-reflect: below 1px linear-gradient(transparent, #000400); */
+}
+
+@keyframes move {
+  0% {
+      background-position: -1000px 0;
+  }
+  50%,
+  100% {
+      background-position: 1000px 0;
+  }
+  100% {
+      background-position: -1000px 0;
+  }
+}
+
+@keyframes translate {
+  from {
+      transform: translateX(-10px);
+  }
+  to {
+      transform: translateX(10px);
+  }
+}
+
+h1.gif-title-h1 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  
+}
+
+
